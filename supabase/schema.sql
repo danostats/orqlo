@@ -1,16 +1,20 @@
-create table if not exists companies (
+create table if not exists public.companies (
   id uuid primary key default gen_random_uuid(),
-  created_at timestamptz default now(),
   name text not null,
-  industry text,
-  city text,
   website text,
-  opportunity_score int default 0,
-  stage text default 'new'
+  city text,
+  industry text,
+  opportunity_score integer default 0,
+  stage text default 'new',
+  created_at timestamptz default now()
 );
-create table if not exists notes (
+
+create table if not exists public.contacts (
   id uuid primary key default gen_random_uuid(),
-  company_id uuid references companies(id) on delete cascade,
-  body text not null,
+  company_id uuid references public.companies(id) on delete cascade,
+  full_name text,
+  email text,
+  phone text,
+  role text,
   created_at timestamptz default now()
 );

@@ -1,7 +1,5 @@
-import {Shell} from '@/components/nav'
-export default function Settings(){return <Shell><h1 className="text-4xl font-black">Settings</h1><p className="text-white/60 mt-2">Connect Supabase, OpenAI, Resend, and Stripe here as we build.</p><div className="card p-6 mt-8 space-y-4"><div><p className="font-bold">Environment variables needed later:</p><pre className="mt-4 p-4 rounded-xl bg-black/30 text-sm overflow-auto">NEXT_PUBLIC_SUPABASE_URL
-NEXT_PUBLIC_SUPABASE_ANON_KEY
-SUPABASE_SERVICE_ROLE_KEY
-OPENAI_API_KEY
-RESEND_API_KEY
-STRIPE_SECRET_KEY</pre></div></div></Shell>}
+import { Nav } from '@/components/nav';
+
+export default function SettingsPage() {
+  return <div className="flex"><Nav/><main className="flex-1 p-6 md:p-10"><h1 className="text-4xl font-black">Settings</h1><p className="mt-2 text-slate-400">Supabase, OpenAI, Stripe, and team settings will connect here.</p><div className="mt-8 card p-5"><p className="font-bold">Environment status</p><p className="mt-3 text-slate-400">Next step: create Supabase project and add environment variables.</p></div></main></div>;
+}

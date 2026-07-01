@@ -1,13 +1,24 @@
-# Orqlo v1
+# Orqlo
 
-Production Next.js foundation for Orqlo.
+Official Next.js foundation for Orqlo — AI Growth Operating System.
 
-## Netlify settings
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+## Netlify build settings
 
 - Build command: `npm run build`
 - Publish directory: leave empty
 - Functions directory: leave empty
 
-## Fix included
+## Next steps
 
-This version pins Tailwind CSS to v3 so `@tailwind base; @tailwind components; @tailwind utilities;` builds correctly on Netlify.
+1. Deploy clean Next.js foundation.
+2. Create Supabase project.
+3. Add database schema.
+4. Connect authentication.
+5. Build CRM data layer.

@@ -1,2 +1,5 @@
-import {Shell} from '@/components/nav'
-export default function Dashboard(){const stats=[['New leads','52'],['Contacted','18'],['Replies','5'],['Meetings','2'],['Pipeline','€12,400'],['Win rate','18%']];return <Shell><h1 className="text-4xl font-black">Dashboard</h1><p className="text-white/60 mt-2">Your daily growth command center.</p><div className="grid md:grid-cols-3 gap-4 mt-8">{stats.map(([a,b])=><div className="card p-6" key={a}><p className="text-white/55">{a}</p><p className="text-3xl font-black mt-2">{b}</p></div>)}</div><div className="card p-6 mt-6"><h2 className="text-xl font-bold">Today’s priorities</h2><ol className="mt-4 space-y-3 text-white/70"><li>1. Import 50 target businesses.</li><li>2. Generate 10 personalized outreach messages.</li><li>3. Move replied leads into Meeting stage.</li></ol></div></Shell>}
+import { Nav } from '@/components/nav';
+
+export default function DashboardPage() {
+  return <div className="flex"><Nav/><main className="flex-1 p-6 md:p-10"><h1 className="text-4xl font-black">Dashboard</h1><p className="mt-2 text-slate-400">Your growth command center.</p><div className="mt-8 grid gap-4 md:grid-cols-4">{[['New leads','52'],['Emails sent','18'],['Replies','5'],['Meetings','2']].map(([a,b])=><div className="card p-5" key={a}><p className="text-slate-400">{a}</p><p className="mt-2 text-3xl font-black">{b}</p></div>)}</div></main></div>;
+}

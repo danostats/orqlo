@@ -1,3 +1,6 @@
-import {Shell} from '@/components/nav'
-const cols=['New','Contacted','Interested','Meeting','Proposal','Won']
-export default function CRM(){return <Shell><h1 className="text-4xl font-black">CRM Pipeline</h1><p className="text-white/60 mt-2">Track every prospect from first contact to closed client.</p><div className="grid lg:grid-cols-6 gap-4 mt-8">{cols.map((c,i)=><div className="card p-4 min-h-72" key={c}><h2 className="font-bold">{c}</h2><div className="mt-4 space-y-3">{i<3&&<div className="rounded-xl bg-white/7 p-4"><p className="font-semibold">{['Alpine Dental','Bella Roma','InkHaus'][i]}</p><p className="text-sm text-white/50 mt-1">AI content offer</p></div>}</div></div>)}</div></Shell>}
+import { Nav } from '@/components/nav';
+
+const stages = ['New','Contacted','Interested','Meeting','Won'];
+export default function CRMPage() {
+  return <div className="flex"><Nav/><main className="flex-1 p-6 md:p-10"><h1 className="text-4xl font-black">CRM Pipeline</h1><p className="mt-2 text-slate-400">Track leads from first contact to paying client.</p><div className="mt-8 grid gap-4 lg:grid-cols-5">{stages.map((stage,i)=><div className="card min-h-80 p-4" key={stage}><p className="font-bold">{stage}</p><div className="mt-4 rounded-xl bg-white/5 p-4"><p className="font-semibold">{i===0?'Alpine Dental':'Lead sample'}</p><p className="mt-1 text-sm text-slate-400">AI content package</p></div></div>)}</div></main></div>;
+}
