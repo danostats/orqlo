@@ -1,0 +1,3 @@
+import {Shell} from '@/components/nav'
+const cols=['New','Contacted','Interested','Meeting','Proposal','Won']
+export default function CRM(){return <Shell><h1 className="text-4xl font-black">CRM Pipeline</h1><p className="text-white/60 mt-2">Track every prospect from first contact to closed client.</p><div className="grid lg:grid-cols-6 gap-4 mt-8">{cols.map((c,i)=><div className="card p-4 min-h-72" key={c}><h2 className="font-bold">{c}</h2><div className="mt-4 space-y-3">{i<3&&<div className="rounded-xl bg-white/7 p-4"><p className="font-semibold">{['Alpine Dental','Bella Roma','InkHaus'][i]}</p><p className="text-sm text-white/50 mt-1">AI content offer</p></div>}</div></div>)}</div></Shell>}
