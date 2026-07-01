@@ -1,23 +1,13 @@
 # Orqlo v1
-Production-ready Next.js foundation for Orqlo.
+
+Production Next.js foundation for Orqlo.
 
 ## Netlify settings
-Build command: `npm run build`
-Publish directory: `.next`
 
-Netlify plugin: `@netlify/plugin-nextjs` is configured in `netlify.toml`.
+- Build command: `npm run build`
+- Publish directory: leave empty
+- Functions directory: leave empty
 
-## Local setup
-npm install
-npm run dev
+## Fix included
 
-## Supabase
-Run `supabase/schema.sql` in Supabase SQL Editor.
-
-## Environment variables
-NEXT_PUBLIC_SUPABASE_URL
-NEXT_PUBLIC_SUPABASE_ANON_KEY
-SUPABASE_SERVICE_ROLE_KEY
-OPENAI_API_KEY
-RESEND_API_KEY
-STRIPE_SECRET_KEY
+This version pins Tailwind CSS to v3 so `@tailwind base; @tailwind components; @tailwind utilities;` builds correctly on Netlify.
